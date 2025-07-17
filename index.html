@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the captivating artworks and exhibitions of a contemporary visual artist specializing in abstract expressionism and modern interpretations.">
+    <title>Sarah Anderson | Contemporary Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1C1F2B;
+            --accent: #FF6F61;
+            --background: #F7F7F7;
+            --text: #333333;
+            --text-light: #B0B0B0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Merriweather', serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(28, 31, 43, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(28, 31, 43, 0.7), rgba(28, 31, 43, 0.7)), url('https://picsum.photos/1920/1080') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        .hero-content h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+        }
+        .hero-content p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-inline: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            margin: 0.5rem;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .gallery {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .exhibitions {
+            background: var(--primary);
+            color: white;
+            padding: 5rem 2rem;
+        }
+        .exhibitions-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .exhibitions h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .artist-statement {
+            padding: 5rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .artist-statement h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 2rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .header-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Sarah Anderson</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#exhibitions">Exhibitions</a></li>
+                    <li><a href="#statement">Statement</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Sarah Anderson</h1>
+            <p>Contemporary artist exploring the boundaries between abstract expression and emotional resonance through vibrant color and dynamic form.</p>
+            <a href="#gallery" class="btn">Explore Gallery</a>
+            <a href="#shop" class="btn">Visit Shop</a>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>Featured Works</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/600/800" alt="Abstract artwork featuring bold brushstrokes">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/601/800" alt="Contemporary mixed media composition">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/602/800" alt="Modern sculptural installation">
+            </div>
+        </div>
+    </section>
+
+    <section class="exhibitions" id="exhibitions">
+        <div class="exhibitions-content">
+            <h2>Current Exhibitions</h2>
+            <div class="exhibition-timeline">
+                <h3>"Chromatic Horizons"</h3>
+                <p>A solo exhibition exploring the intersection of color theory and emotional landscapes. Opening Reception: September 15th, 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="artist-statement" id="statement">
+        <h2>Artist Statement</h2>
+        <p>My work explores the delicate balance between chaos and order, drawing inspiration from nature's patterns and urban rhythms. Through my practice, I seek to create dialogues between color and form, inviting viewers to discover their own narratives within each piece.</p>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Sarah Anderson</h3>
+                <p>Contemporary Artist</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>studio@sarahanderson.com</p>
+            </div>
+            <div>
+                <h3>Follow</h3>
+                <p>Instagram | Facebook | Twitter</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(28, 31, 43, 0.98)';
+                } else {
+                    header.style.background = 'rgba(28, 31, 43, 0.95)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
